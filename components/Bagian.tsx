@@ -72,7 +72,7 @@ export function Jarak({ now }: { now: Date | null }) {
   const kurangGerak = useKurangGerak();
   const grid = useRef<HTMLDivElement>(null);
   const [k, setK] = useState(1);
-  const hariBersama = now ? Math.max(0, Math.floor((now.getTime() - new Date(C.jadian).getTime()) / 86400000)) : 0;
+  const hariBersama = now ? Math.max(0, Math.floor((now.getTime() - new Date(C.ketemu).getTime()) / 86400000)) : 0;
   useEffect(() => {
     if (kurangGerak || !grid.current) return;
     setK(0);
@@ -82,7 +82,7 @@ export function Jarak({ now }: { now: Date | null }) {
       const t0 = performance.now();
       const step = (t: number) => { const p = Math.min(1, (t - t0) / 1400); setK(1 - Math.pow(1 - p, 3)); if (p < 1) requestAnimationFrame(step); };
       requestAnimationFrame(step);
-    }, { threshold: 0.4 });
+    }, { threshold: 0, rootMargin: "0px 0px -15% 0px" }); // mulai begitu bagian atas angka masuk layar, setinggi apa pun gridnya
     io.observe(grid.current);
     return () => io.disconnect();
   }, [kurangGerak]);
@@ -98,7 +98,7 @@ export function Jarak({ now }: { now: Date | null }) {
       <div className="wrap">
         <h2 className="jarak-judul">Kita dipisah <em>2 jam</em> dan <em>{fmt(C.jarakKm)} km</em>, tapi tetap di hari yang sama.</h2>
         <div className="angka-grid" ref={grid}>
-          <div className="angka"><b>{fmt(Math.round(hariBersama * k))}</b><span>hari sejak kita jadian</span></div>
+          <div className="angka"><b>{fmt(Math.round(hariBersama * k))}</b><span>hari sejak pertama kali kita ketemu</span></div>
           <div className="angka"><b>{Math.round(2 * k)}</b><span>jam aku hidup lebih dulu darimu, cuma buat nungguin kamu</span></div>
           <div className="angka"><b>{langit}</b><span>{aku ? `di tempatmu sekarang. Di tempatku sudah jam ${dua(aku.j)}.${dua(aku.m)}.` : "langit di atasmu sekarang"}</span></div>
         </div>

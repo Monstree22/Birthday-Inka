@@ -17,8 +17,8 @@ export const ULTAH = {
   // 3 Januari 2027, 00:00 waktu Inka (WIB).
   ultah: "2027-01-03T00:00:00+07:00",
 
-  // Tanggal jadian (untuk penghitung "hari bersama"). EDIT.
-  jadian: "2024-02-14T00:00:00+07:00",
+  // Tanggal pertama kali ketemu (untuk penghitung hari di bagian "Dua jam").
+  ketemu: "2026-08-14T00:00:00+07:00",
 
   // Jarak kira-kira (km), garis lurus Nagoya–Batam ± 5.050 km.
   jarakKm: 5050,

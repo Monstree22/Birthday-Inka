@@ -198,12 +198,13 @@ h1 em,h2 em,.penutup-besar em{font-style:italic;color:var(--hanko)}
 .amplop.buka .amplop-tutup{transform:rotateX(180deg)}
 .amplop.buka .segel{opacity:0}
 .amplop.hilang{display:none}
-.kertas{width:min(620px,100%);background-color:#FFFBF4;border-radius:6px;padding:clamp(28px,4vw,52px);box-shadow:0 30px 60px -36px rgba(43,32,26,.6);background-image:repeating-linear-gradient(to bottom,transparent 0 33px,rgba(43,32,26,.07) 33px 34px);max-height:74svh;overflow:auto;animation:keluar .9s var(--ease) both}
+/* Semua jarak vertikal surat = kelipatan --baris, jadi setiap baris tulisan duduk tepat di atas garis. */
+.kertas{--baris:34px;width:min(620px,100%);background-color:#FFFBF4;border-radius:6px;padding:var(--baris) clamp(24px,4vw,52px);box-shadow:0 30px 60px -36px rgba(43,32,26,.6);background-image:repeating-linear-gradient(to bottom,transparent 0 calc(var(--baris) - 1px),rgba(43,32,26,.09) calc(var(--baris) - 1px) var(--baris));background-attachment:local;max-height:74svh;overflow:auto;animation:keluar .9s var(--ease) both}
 .kertas[hidden]{display:none}
 @keyframes keluar{from{opacity:0;transform:translateY(40px) scale(.96)}}
-.kertas p{font:500 clamp(22px,2.2vw,26px)/34px var(--tangan);color:var(--tinta);margin-bottom:17px}
-.kertas p:first-child{color:var(--hanko);font-size:clamp(26px,2.6vw,30px)}
-.kertas .ttd{text-align:right;color:var(--hanko);margin-top:8px}
+.kertas p{font:500 clamp(21px,2.1vw,25px)/var(--baris) var(--tangan);color:var(--tinta);margin:0 0 var(--baris)}
+.kertas p:first-child{color:var(--hanko);font-size:clamp(25px,2.5vw,29px)}
+.kertas p.ttd{text-align:right;color:var(--hanko);margin:0}
 
 /* ===== Tiket ===== */
 .tiket{display:grid;grid-template-columns:1fr auto;max-width:980px;background:#FFFBF4;border-radius:18px;box-shadow:0 30px 60px -40px rgba(43,32,26,.6);position:relative}

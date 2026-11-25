@@ -45,7 +45,7 @@ export const ULTAH = {
     "Inka sayang,",
     "Waktu kamu baca ini, di tempatmu sudah lewat tengah malam, dan di sini sudah jam dua pagi. Aku sengaja nggak tidur. Aku mau jadi orang yang pertama bilang: selamat ulang tahun.",
     "Dua jam itu lucu ya. Aku selalu duluan sampai di hari esok, tapi rasanya aku yang selalu nungguin kamu nyusul. Hari ini aku nungguin kamu sampai di hari paling penting tahun ini.",
-    "Terima kasih sudah sabar sama jarak, sama sinyal yang putus-putus, sama aku yang kadang ketiduran di tengah telepon. Terima kasih sudah tetap memilih aku, dari jauh.",
+    "Terima kasih sudah sabar sama jarak dan sinyal yang putus-putus. Terima kasih karena kamu selalu menghargai hal-hal kecil yang aku lakukan, bahkan yang aku kira nggak kelihatan. Dan terima kasih karena suaramu selalu bisa bikin aku tenang, seberat apa pun hariku di sini. Terima kasih sudah tetap memilih aku, dari jauh.",
     "Semoga umur barumu penuh hal baik: sehat, tenang, banyak tertawa, dan semua yang kamu doakan pelan-pelan jadi nyata. Dan semoga tahun ini, jarak kita tinggal cerita.",
     "Aku sayang kamu. Hari ini, besok, dan dua jam lebih awal dari kamu setiap harinya.",
   ],

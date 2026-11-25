@@ -50,6 +50,23 @@ export const ULTAH = {
     "Aku sayang kamu. Hari ini, besok, dan dua jam lebih awal dari kamu setiap harinya.",
   ],
 
+  // Pesan suara (kaset). Rekam di HP, simpan sebagai public/suara/pesan-untuk-inka.mp3 (m4a juga bisa, sesuaikan nama).
+  // Selama file belum ada, bagian kaset otomatis disembunyikan.
+  pesanSuara: {
+    file: "/suara/pesan-untuk-inka.mp3",
+    label: "Untuk Inka · 03.01.27",
+  },
+
+  // Surat-surat kecil "Buka saat…". Boleh tambah/hapus. EDIT kata-katanya sesukamu.
+  bukaSaat: [
+    { kapan: "kamu kangen", isi: "Aku juga. Mungkin lebih. Lihat jam sekarang, tambah dua jam: itu jam di tempatku, dan hampir pasti aku juga lagi mikirin kamu. Telepon aku, ya. Kalau belum aku angkat, pasti aku telepon balik." },
+    { kapan: "kamu lagi sedih", isi: "Nggak apa-apa sedih. Kamu nggak harus kuat terus. Tarik napas pelan, minum air, terus cerita ke aku sepanjang apa pun. Aku memang jauh, tapi aku selalu mau dengar." },
+    { kapan: "kamu nggak bisa tidur", isi: "Di tempatku dua jam lebih malam, jadi anggap aku yang nemenin kamu begadang. Taruh HP-nya, pejamkan mata, hitung mundur dari seratus. Aku taruhan kamu ketiduran sebelum lima puluh." },
+    { kapan: "kita lagi berantem", isi: "Kalau kamu baca ini, berarti kita lagi berantem. Maaf ya, siapa pun yang salah. Aku lebih milih kita baikan daripada menang. Kabarin aku kalau sudah siap ngobrol, aku tunggu." },
+    { kapan: "kamu capek banget", isi: "Kamu sudah berusaha keras hari ini, aku tahu walaupun nggak lihat langsung. Istirahat dulu. Dunia bisa nunggu sebentar, aku juga." },
+    { kapan: "ada kabar bahagia", isi: "Ceritain ke aku sekarang juga! Aku mau jadi orang pertama yang ikut senang. Apa pun itu, aku bangga sama kamu." },
+  ],
+
   tiket: {
     dari: "NGO", dariKota: "Nagoya",
     ke: "BTH", keKota: "Batam",

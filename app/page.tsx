@@ -5,6 +5,7 @@ import { useDetik } from "@/lib/waktu";
 import Hero from "@/components/Hero";
 import Lilin from "@/components/Lilin";
 import { Nav, Gerbang, Jarak, Perjalanan, Galeri, Surat, Tiket, Penutup, Kaki } from "@/components/Bagian";
+import { BukaSaat, PesanSuara } from "@/components/Tambahan";
 
 export default function Halaman() {
   const now = useDetik();
@@ -28,6 +29,8 @@ export default function Halaman() {
         <Perjalanan />
         <Galeri />
         <Surat />
+        <PesanSuara />
+        <BukaSaat />
         <Tiket />
         <Penutup />
       </main>

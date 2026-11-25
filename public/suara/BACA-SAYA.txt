@@ -1,0 +1,4 @@
+Taruh rekaman suaramu di sini dengan nama: pesan-untuk-inka.mp3
+(Rekaman HP berformat .m4a juga bisa: ganti "file" di data/ultah.ts jadi "/suara/pesan-untuk-inka.m4a")
+Selama file belum ada, bagian kaset otomatis tidak tampil di website.
+Tips: 1-3 menit sudah cukup; ukuran di bawah 5 MB supaya cepat dibuka.

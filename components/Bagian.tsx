@@ -32,7 +32,7 @@ export function Nav() {
       <div className="wrap nav-isi">
         <a className="merek" href="#atas" aria-label="Kembali ke atas"><span className="cap">I</span><span>{C.panggilanDia} · 03.01</span></a>
         <nav aria-label="Bagian">
-          <a href="#lilin">Lilin</a><a href="#jarak">Dua jam</a><a href="#perjalanan">Perjalanan</a><a href="#galeri">Galeri</a><a href="#surat">Surat</a>
+          <a href="#lilin">Lilin</a><a href="#jarak">Dua jam</a><a href="#perjalanan">Perjalanan</a><a href="#galeri">Galeri</a><a href="#surat">Surat</a><a href="#bukasaat">Buka saat</a>
         </nav>
         {C.lagu && (
           <>

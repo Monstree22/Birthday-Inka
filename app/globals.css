@@ -11,9 +11,9 @@
   --garis:rgba(43,32,26,.14);
   --r:14px;
   --edge:clamp(20px,5vw,72px);
-  --serif:"Fraunces",Georgia,serif;
-  --sans:"Manrope",system-ui,sans-serif;
-  --tangan:"Caveat",cursive;
+  --serif:var(--font-serif),Georgia,serif;
+  --sans:var(--font-sans),system-ui,sans-serif;
+  --tangan:var(--font-tangan),cursive;
   --ease:cubic-bezier(.2,.7,.2,1);
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -84,7 +84,8 @@ h1 em,h2 em,.penutup-besar em{font-style:italic;color:var(--hanko)}
 .hitung b{display:block;font:400 clamp(40px,6vw,72px)/1 var(--serif);font-variant-numeric:tabular-nums}
 .hitung span{font-size:14px;color:rgba(243,236,225,.6)}
 .gerbang-catatan{color:rgba(243,236,225,.7)}
-body.terkunci #utama-wrap{display:none}
+.memuat{min-height:100svh;background:var(--malam)}
+.gerbang>.wrap{width:100%}
 
 /* ===== Hero ===== */
 .hero{background:radial-gradient(1200px 600px at 85% 20%,rgba(217,164,65,.18),transparent 60%),var(--kertas)}

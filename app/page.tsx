@@ -6,7 +6,10 @@ import Hero from "@/components/Hero";
 import Lilin from "@/components/Lilin";
 import { Nav, Gerbang, Jarak, Perjalanan, Galeri, Surat, Tiket, Penutup, Kaki } from "@/components/Bagian";
 import { BukaSaat, PesanSuara } from "@/components/Tambahan";
-import Dunia from "@/components/dunia/Dunia";
+import dynamic from "next/dynamic";
+
+// Three.js hanya diunduh saat dunia 3D dibuka (versi biasa & hitung mundur tetap ringan).
+const Dunia = dynamic(() => import("@/components/dunia/Dunia"), { ssr: false, loading: () => <div className="dunia" /> });
 
 export default function Halaman() {
   const now = useDetik();

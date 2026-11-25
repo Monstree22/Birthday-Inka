@@ -292,7 +292,13 @@ h1 em,h2 em,.penutup-besar em{font-style:italic;color:var(--hanko)}
 
 /* ===== Dunia taman ===== */
 .dunia{position:fixed;inset:0;overflow:hidden;background:#A7B98A;touch-action:none;user-select:none;-webkit-user-select:none}
-.dunia-kanvas{display:block;width:100%;height:100%;cursor:pointer;image-rendering:pixelated;outline:none}
+.dunia{background:radial-gradient(120% 90% at 50% 40%,#FBF6EE,#EADFCD)}
+.dunia-kanvas{display:block;width:100%;height:100%;cursor:pointer;outline:none}
+.label-lapis{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.label3d{position:absolute;left:0;top:0;pointer-events:auto;min-height:32px;padding:0 12px;border-radius:999px;background:rgba(255,251,244,.94);color:var(--tinta);font-size:13px;font-weight:600;white-space:nowrap;box-shadow:0 6px 16px -10px rgba(43,32,26,.6);transition:opacity .2s,background .2s,color .2s;will-change:transform}
+.label3d::after{content:"";position:absolute;left:50%;bottom:-5px;width:10px;height:10px;background:inherit;transform:translateX(-50%) rotate(45deg);border-radius:2px;z-index:-1}
+.label3d:hover{background:#fff}
+.label3d.aktif{background:var(--hanko);color:#FFF8EE}
 .dunia-kanvas:focus-visible{box-shadow:inset 0 0 0 3px var(--hanko)}
 .hud-pil{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:0 14px;border-radius:999px;background:rgba(255,251,244,.94);box-shadow:0 8px 20px -12px rgba(43,32,26,.5);font-size:14px;font-weight:600;color:var(--tinta)}
 .hud-atas{position:absolute;left:var(--edge);right:var(--edge);top:16px;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;pointer-events:none}

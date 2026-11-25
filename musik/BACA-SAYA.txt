@@ -1,0 +1,1 @@
+Opsional: taruh lagu mp3 di sini, lalu isi "lagu" di config.js, contoh: "musik/lagu-kita.mp3"

@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Selamat Ulang Tahun, Inka</title>
+<meta name="description" content="Untuk Inka Puspita Ningrum, 3 Januari 2027. Dari Zean, dua jam lebih awal.">
+<meta property="og:title" content="Selamat Ulang Tahun, Inka">
+<meta property="og:description" content="Dari Jepang ke Indonesia, dua jam lebih awal.">
+<meta name="theme-color" content="#F3ECE1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23C2412D'/%3E%3Ctext x='16' y='22' font-size='16' text-anchor='middle' fill='%23F3ECE1' font-family='serif'%3EI%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Manrope:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+</head>
+<body>
+<!-- Desain: kertas krem + merah hanko (cap Jepang) + tinta cokelat tua. Tanpa ungu.
+     Dua momen: lilin yang bisa ditiup (mikrofon) dan amplop yang dibuka. -->
+<a class="skip" href="#utama">Lewati ke isi</a>
+
+<!-- ============ GERBANG HITUNG MUNDUR (sebelum hari H) ============ -->
+<section id="gerbang" class="gerbang" hidden>
+  <div class="wrap gerbang-isi" data-enter>
+    <p class="kicker">Untuk <span data-isi="panggilanDia"></span>, dari <span data-isi="panggilanKamu"></span></p>
+    <h1 class="gerbang-judul">Ada yang lagi aku siapin.<br><em>Buka lagi pas kamu ulang tahun.</em></h1>
+    <div class="hitung" role="timer" aria-live="off">
+      <div><b data-h="hari">00</b><span>hari</span></div>
+      <div><b data-h="jam">00</b><span>jam</span></div>
+      <div><b data-h="menit">00</b><span>menit</span></div>
+      <div><b data-h="detik">00</b><span>detik</span></div>
+    </div>
+    <p class="gerbang-catatan">Terbuka 3 Januari 2027, 00.00 di tempatmu, 02.00 di tempatku.</p>
+  </div>
+</section>
+
+<div id="utama-wrap">
+<header class="nav">
+  <div class="wrap nav-isi">
+    <a class="merek" href="#atas" aria-label="Kembali ke atas"><span class="cap">I</span><span>Inka · 03.01</span></a>
+    <nav aria-label="Bagian">
+      <a href="#lilin">Lilin</a>
+      <a href="#jarak">Dua jam</a>
+      <a href="#perjalanan">Perjalanan</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#surat">Surat</a>
+    </nav>
+    <button class="musik" type="button" aria-pressed="false" hidden>
+      <span class="musik-bar" aria-hidden="true"><i></i><i></i><i></i></span><span class="musik-teks">Putar lagu</span>
+    </button>
+  </div>
+</header>
+
+<main id="utama">
+
+  <!-- ============ HERO ============ -->
+  <section id="atas" class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-teks" data-enter>
+        <p class="kicker">3 Januari 2027 · Indonesia ← Jepang</p>
+        <h1>Selamat ulang tahun,<br><em data-isi="namaDia"></em></h1>
+        <p class="lead">Di tempatmu jam 00.00, di tempatku sudah 02.00. Aku duluan dua jam ke hari ini, cuma buat nungguin kamu sampai.</p>
+        <div class="aksi">
+          <a class="tombol" href="#lilin">Tiup lilinnya</a>
+          <a class="tombol tombol-garis" href="#surat">Baca suratku</a>
+        </div>
+      </div>
+      <div class="jam-pasang" data-enter style="--d:.25s">
+        <figure class="jam" data-zona="dia">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="96" class="jam-muka"/>
+            <g class="jam-tanda"></g>
+            <line x1="100" y1="100" x2="100" y2="52" class="jarum-jam"/>
+            <line x1="100" y1="100" x2="100" y2="30" class="jarum-menit"/>
+            <line x1="100" y1="112" x2="100" y2="24" class="jarum-detik"/>
+            <circle cx="100" cy="100" r="5" class="jam-pusat"/>
+          </svg>
+          <div class="jam-label"><b class="jam-digital">--:--</b><span><span data-isi="panggilanDia"></span> · <span data-isi="kotaDia"></span></span></div>
+        </figure>
+        <figure class="jam jam-kecil" data-zona="kamu">
+          <svg viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="96" class="jam-muka"/>
+            <g class="jam-tanda"></g>
+            <line x1="100" y1="100" x2="100" y2="52" class="jarum-jam"/>
+            <line x1="100" y1="100" x2="100" y2="30" class="jarum-menit"/>
+            <line x1="100" y1="112" x2="100" y2="24" class="jarum-detik"/>
+            <circle cx="100" cy="100" r="5" class="jam-pusat"/>
+          </svg>
+          <div class="jam-label"><b class="jam-digital">--:--</b><span><span data-isi="panggilanKamu"></span> · <span data-isi="kotaKamu"></span></span></div>
+        </figure>
+        <span class="selisih" aria-hidden="true">+2 jam</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LILIN ============ -->
+  <section id="lilin" class="lilin">
+    <div class="wrap lilin-grid">
+      <div>
+        <h2>Lilin yang harus kamu tiup sendiri</h2>
+        <p class="lead">Aku nggak bisa pegangin kuenya, jadi kuenya aku kirim lewat sini. Izinkan mikrofon, pejamkan mata, bikin permohonan, lalu tiup ke layar. Nggak ada mikrofon? Ketuk lilinnya satu per satu.</p>
+        <div class="aksi">
+          <button class="tombol" type="button" id="pakaiMik">Nyalakan mikrofon</button>
+          <button class="tombol tombol-garis" type="button" id="nyalakanLagi" hidden>Nyalakan lagi lilinnya</button>
+        </div>
+        <p class="lilin-status" id="lilinStatus" aria-live="polite"></p>
+      </div>
+      <div class="kue-bingkai">
+        <div class="kue" id="kue">
+          <div class="lilin-baris" id="lilinBaris"></div>
+          <div class="kue-lapis kue-atas"><span class="krim"></span></div>
+          <div class="kue-lapis kue-bawah"><span class="tulisan-kue">Inka</span></div>
+          <div class="piring"></div>
+        </div>
+        <p class="harapan" id="harapan" hidden>Permohonanmu sudah aku dengar dari jauh. Semoga semuanya terkabul.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DUA JAM / JARAK ============ -->
+  <section id="jarak" class="jarak">
+    <div class="wrap">
+      <h2 class="jarak-judul">Kita dipisah <em>2 jam</em> dan <em><span id="jarakKm">5.800</span> km</em>, tapi tetap di hari yang sama.</h2>
+      <div class="angka-grid">
+        <div class="angka"><b id="hariBersama">0</b><span>hari sejak kita jadian</span></div>
+        <div class="angka"><b id="jamLebih">0</b><span>jam aku hidup lebih dulu darimu, cuma buat nungguin kamu</span></div>
+        <div class="angka"><b id="langit">--</b><span id="langitTeks">langit di atasmu sekarang</span></div>
+      </div>
+      <div class="garis-waktu" aria-hidden="true">
+        <div class="gw-baris"><span>Kamu</span><div class="gw-pita" id="pitaDia"></div></div>
+        <div class="gw-baris"><span>Aku</span><div class="gw-pita" id="pitaKamu"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PERJALANAN ============ -->
+  <section id="perjalanan" class="perjalanan">
+    <div class="wrap">
+      <h2>Perjalanan kita, kartu pos demi kartu pos</h2>
+      <ol class="kartupos-list" id="kartuposList"></ol>
+    </div>
+  </section>
+
+  <!-- ============ GALERI ============ -->
+  <section id="galeri" class="galeri">
+    <div class="wrap">
+      <h2>Kamu, dalam foto-foto yang aku simpan</h2>
+      <div class="dinding" id="dinding"></div>
+    </div>
+  </section>
+
+  <!-- ============ SURAT ============ -->
+  <section id="surat" class="surat">
+    <div class="wrap surat-grid">
+      <div class="surat-intro">
+        <h2>Surat yang nggak muat di chat</h2>
+        <p class="lead">Ditulis jam dua pagi waktu Jepang. Buka amplopnya pelan-pelan.</p>
+      </div>
+      <div class="amplop-bingkai">
+        <button class="amplop" id="amplop" type="button" aria-expanded="false" aria-controls="kertas">
+          <span class="amplop-belakang"></span>
+          <span class="amplop-tutup"></span>
+          <span class="amplop-depan"></span>
+          <span class="segel">I</span>
+          <span class="amplop-teks">Untuk Inka</span>
+        </button>
+        <article class="kertas" id="kertas" hidden tabindex="-1"></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TIKET ============ -->
+  <section id="tiket" class="tiket-sek">
+    <div class="wrap">
+      <h2>Satu tiket, berlaku sampai kita ketemu</h2>
+      <div class="tiket" id="tiket">
+        <div class="tiket-utama">
+          <div class="tiket-atas"><span class="cap kecil">I</span><span>BOARDING PASS · KELAS RINDU</span></div>
+          <div class="tiket-rute">
+            <div><b id="tDari">NRT</b><span id="tDariKota">Tokyo</span></div>
+            <svg viewBox="0 0 120 24" aria-hidden="true"><path d="M2 12h104" stroke-dasharray="4 5"/><path d="M104 5l12 7-12 7"/></svg>
+            <div><b id="tKe">CGK</b><span id="tKeKota">Jakarta</span></div>
+          </div>
+          <dl class="tiket-info">
+            <div><dt>Penumpang</dt><dd id="tNama"></dd></div>
+            <div><dt>Kursi</dt><dd id="tKursi"></dd></div>
+            <div><dt>Berlaku</dt><dd id="tBerlaku"></dd></div>
+          </dl>
+          <p class="tiket-janji" id="tJanji"></p>
+        </div>
+        <div class="tiket-sobek">
+          <button class="tombol" type="button" id="sobek">Sobek &amp; simpan tiketnya</button>
+          <p class="sobek-hasil" id="sobekHasil" hidden>Tersimpan. Tunjukkan ke aku pas kita ketemu, ya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PENUTUP ============ -->
+  <section class="penutup">
+    <div class="wrap">
+      <p class="penutup-besar">Selamat ulang tahun, <em>Inka</em>.</p>
+      <p class="penutup-kecil">Dari <span data-isi="namaKamu"></span>, dua jam di depanmu, selalu.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="kaki">
+  <div class="wrap kaki-isi">
+    <span>Dibuat dengan sabar, dari Jepang untuk Indonesia.</span>
+    <a href="#atas">Kembali ke atas</a>
+  </div>
+</footer>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-tutup" type="button" aria-label="Tutup foto">×</button>
+  <img alt="">
+</div>
+<audio id="audio" loop preload="none"></audio>
+
+<script src="app.js"></script>
+</body>
+</html>

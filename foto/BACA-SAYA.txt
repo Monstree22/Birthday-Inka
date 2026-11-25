@@ -1,0 +1,4 @@
+Taruh foto kalian di sini dengan nama 1.jpg, 2.jpg, ... 8.jpg
+(atau nama lain, lalu sesuaikan daftar "foto" di config.js).
+Foto 1-4 juga dipakai di kartu pos Perjalanan.
+Tips: perkecil dulu ke lebar +-1600px supaya website cepat dibuka.

@@ -222,8 +222,6 @@ export function Tiket() {
               <div><b>{T.ke}</b><span>{T.keKota}</span></div>
             </div>
             <dl className="tiket-info">
-              <div><dt>Penumpang</dt><dd>{C.namaDia}</dd></div>
-              <div><dt>Kursi</dt><dd>{T.kursi}</dd></div>
               <div><dt>Berlaku</dt><dd>{T.berlaku}</dd></div>
             </dl>
             <p className="tiket-janji">{T.janji}</p>

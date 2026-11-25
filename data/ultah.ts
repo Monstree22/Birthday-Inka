@@ -20,8 +20,8 @@ export const ULTAH = {
   // Tanggal jadian (untuk penghitung "hari bersama"). EDIT.
   jadian: "2024-02-14T00:00:00+07:00",
 
-  // Jarak kira-kira (km). Jakarta–Tokyo ± 5.800 km. EDIT kalau beda kota.
-  jarakKm: 5800,
+  // Jarak kira-kira (km), garis lurus Nagoya–Batam ± 5.050 km.
+  jarakKm: 5050,
 
   // true = sebelum hari H hanya tampil hitung mundur. Intip dengan alamat ?intip
   kunciSampaiUltah: true,
@@ -51,9 +51,8 @@ export const ULTAH = {
   ],
 
   tiket: {
-    dari: "NRT", dariKota: "Tokyo",
-    ke: "CGK", keKota: "Jakarta",
-    kursi: "Di sebelahmu",
+    dari: "NGO", dariKota: "Nagoya",
+    ke: "BTH", keKota: "Batam",
     berlaku: "Sampai kita ketemu",
     janji: "Tukarkan dengan satu pelukan panjang, satu hari jalan-jalan sesukamu, dan aku yang nggak pegang HP seharian.",
   },

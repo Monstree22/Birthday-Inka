@@ -35,7 +35,7 @@ export function BukaSaat() {
   };
 
   return (
-    <section id="bukasaat" className="bukasaat">
+    <section id="bukasaat" className="bukasaat" data-cap="Buka saat">
       <div className="wrap">
         <h2>Surat kecil untuk hari-hari biasa</h2>
         <p className="lead">Ulang tahun cuma sehari. Amplop-amplop ini untuk hari lainnya. Buka satu kalau waktunya pas, nggak usah semuanya sekarang.</p>
@@ -97,7 +97,7 @@ export function PesanSuara() {
   const sisaRasio = durasi ? 1 - posisi / durasi : 1; // pita pindah dari gulungan kiri ke kanan
 
   return (
-    <section id="suara" className="suara">
+    <section id="suara" className="suara" data-cap="Kaset">
       <div className="wrap suara-grid">
         <div>
           <h2>Suara yang nggak bisa kamu dengar langsung hari ini</h2>

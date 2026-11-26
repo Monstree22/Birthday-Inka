@@ -122,14 +122,17 @@ export function AdeganJendela({ now }: { now: Date | null }) {
 }
 
 /* ================= Adegan 2: Langit yang sama ================= */
-const RASI: [number, number][] = [[32, 14], [50, 14], [68, 14], [50, 38], [50, 62], [32, 86], [50, 86], [68, 86]];
-const GARIS = "M32 14 L68 14 M50 14 L50 86 M32 86 L68 86";
+// Titik-titik dibuat sedikit tidak rata supaya terasa seperti rasi bintang, bukan huruf cetak.
+const RASI: [number, number][] = [[29, 17], [49, 12], [70, 16], [52, 36], [48, 58], [30, 80], [50, 84], [71, 79]];
+const GARIS = "M29 17 L49 12 L70 16 M49 12 L52 36 L48 58 L50 84 M30 80 L50 84 L71 79";
 
 export function AdeganLangit() {
   const ref = useRef<HTMLElement>(null);
   useProgres(ref);
   const [buka, setBuka] = useState<number | null>(null);
+  const [dilihat, setDilihat] = useState<number[]>([]);
   const tutup = useRef<HTMLButtonElement>(null);
+  const lihat = (i: number) => { setBuka(i); setDilihat((d) => (d.includes(i) ? d : [...d, i])); };
   const bintang = useRef(Array.from({ length: 90 }, (_, i) => ({ x: (i * 37.7) % 100, y: (i * 61.3) % 100, r: i % 5 ? 0.25 : 0.45 }))).current;
   const kenangan = RASI.slice(0, Math.max(1, Math.min(RASI.length, C.foto.length)));
   useEffect(() => {
@@ -144,7 +147,10 @@ export function AdeganLangit() {
         <div className="wrap langit-isi">
           <div className="langit-teks">
             <h2>Langit yang sama</h2>
-            <p className="lead">Bulan yang kamu lihat malam ini, sudah aku lihat dua jam lebih dulu. Setiap bintang terang di sini satu kenangan kita. Ketuk salah satunya.</p>
+            <p className="lead">Bulan yang kamu lihat malam ini, sudah aku lihat dua jam lebih dulu. Di langit itu aku sambungkan bintang-bintang jadi inisialmu. Tiap bintang terang menyimpan satu foto kita.</p>
+            <p className="langit-hitung" aria-live="polite">
+              {dilihat.length === 0 ? "Ketuk bintang yang bersinar untuk membuka kenangannya." : dilihat.length < kenangan.length ? `${dilihat.length} dari ${kenangan.length} kenangan sudah kamu buka.` : `Semua ${kenangan.length} kenangan sudah kamu buka.`}
+            </p>
           </div>
           <div className="langit-kotak">
             <svg viewBox="0 0 100 100" className="langit-svg" aria-hidden="true">
@@ -152,11 +158,13 @@ export function AdeganLangit() {
               <path d={GARIS} className="rasi-garis" pathLength={1} />
             </svg>
             {kenangan.map(([x, y], i) => (
-              <button key={i} type="button" className="bintang-kenangan" style={{ left: `${x}%`, top: `${y}%`, ["--i" as string]: i }}
-                aria-label={`Buka kenangan ${i + 1}`} onClick={() => setBuka(i)}>
+              <button key={i} type="button" className={`bintang-kenangan${dilihat.includes(i) ? " dilihat" : ""}`} style={{ left: `${x}%`, top: `${y}%`, ["--i" as string]: i }}
+                aria-label={`Buka kenangan ${i + 1}`} onClick={() => lihat(i)}>
                 <span />
               </button>
             ))}
+            {dilihat.length === 0 && <span className="langit-ketuk" aria-hidden="true">ketuk aku</span>}
+            <p className="langit-nama" aria-hidden="true"><b>I</b> · Rasi Inka<small>{kenangan.length} bintang, {kenangan.length} kenangan</small></p>
           </div>
         </div>
       </div>

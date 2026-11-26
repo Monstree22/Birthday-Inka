@@ -327,6 +327,17 @@ main>section.adegan{display:block;min-height:0;padding:0}
 .rasi-garis{fill:none;stroke:var(--emas);stroke-width:.45;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:max(0,calc(1 - var(--p,0) * 1.35))}
 .bintang-kenangan{position:absolute;width:48px;height:48px;transform:translate(-50%,-50%);display:grid;place-items:center;border-radius:50%;opacity:clamp(0,calc(var(--p,0) * 11 - var(--i)),1);transition:transform .25s var(--ease)}
 .bintang-kenangan span{width:14px;height:14px;border-radius:50%;background:#FFE9B8;box-shadow:0 0 0 5px rgba(217,164,65,.28),0 0 22px 6px rgba(255,214,140,.45);animation:kerlip 3.2s ease-in-out infinite;animation-delay:calc(var(--i) * -.4s)}
+.bintang-kenangan::before{content:"";position:absolute;inset:6px;border-radius:50%;border:1.5px solid rgba(255,214,140,.7);animation:denyut 2.4s ease-out infinite;animation-delay:calc(var(--i) * .3s)}
+.bintang-kenangan.dilihat::before{display:none}
+.bintang-kenangan.dilihat span{background:var(--emas);box-shadow:0 0 0 4px rgba(217,164,65,.18),0 0 10px 2px rgba(255,214,140,.25);animation:none}
+@keyframes denyut{0%{transform:scale(.5);opacity:.9}100%{transform:scale(1.5);opacity:0}}
+.langit-hitung{margin-top:18px;font-size:.95rem;color:var(--emas)}
+.langit-ketuk{position:absolute;left:29%;top:17%;transform:translate(-115%,-130%) rotate(-8deg);font-family:var(--font-tangan),cursive;font-size:1.35rem;color:#FFE9B8;white-space:nowrap;pointer-events:none;opacity:clamp(0,calc(var(--p,0) * 3 - 1.6),1)}
+.langit-ketuk::after{content:"↘";margin-left:2px}
+.langit-nama{position:absolute;left:50%;bottom:-2%;transform:translateX(-50%);margin:0;text-align:center;font-family:var(--font-tangan),cursive;font-size:1.5rem;line-height:1.1;color:#F3ECE1;white-space:nowrap;opacity:clamp(0,calc(var(--p,0) * 4 - 2.6),1)}
+.langit-nama b{color:var(--emas);font-weight:600}
+.langit-nama small{display:block;font-family:inherit;font-size:1rem;color:rgba(243,236,225,.6)}
+@media (prefers-reduced-motion:reduce){.bintang-kenangan::before{animation:none;opacity:0}}
 .bintang-kenangan:hover{transform:translate(-50%,-50%) scale(1.25)}
 .bintang-kenangan:active{transform:translate(-50%,-50%) scale(1.1)}
 @keyframes kerlip{50%{box-shadow:0 0 0 9px rgba(217,164,65,.12),0 0 30px 10px rgba(255,214,140,.35)}}

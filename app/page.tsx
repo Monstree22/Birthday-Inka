@@ -3,9 +3,8 @@ import { useEffect, useState } from "react";
 import { ULTAH as C } from "@/data/ultah";
 import { useDetik } from "@/lib/waktu";
 import Lilin from "@/components/Lilin";
-import { Nav, Gerbang, Surat, Tiket, Penutup, Kaki } from "@/components/Bagian";
+import { Nav, Gerbang, Pembuka, DuaJam, KartuHati, Galeri, HalKecil, Tiket, Penutup, Kaki } from "@/components/Bagian";
 import { BukaSaat, PesanSuara } from "@/components/Tambahan";
-import { AdeganJendela, AdeganLangit, AdeganBuku, AdeganSatu, AmplopKecil } from "@/components/cerita/Adegan";
 
 export default function Halaman() {
   const now = useDetik();
@@ -23,19 +22,18 @@ export default function Halaman() {
       <a className="skip" href="#utama">Lewati ke isi</a>
       <Nav />
       <main id="utama">
-        <AdeganJendela now={now} />
-        <AdeganLangit />
-        <AdeganBuku />
+        <Pembuka />
+        <DuaJam now={now} />
+        <KartuHati />
+        <Galeri />
+        <HalKecil />
         <PesanSuara />
         <BukaSaat />
-        <Surat />
         <Lilin />
-        <AdeganSatu now={now} />
         <Tiket />
         <Penutup />
       </main>
       <Kaki />
-      <AmplopKecil />
     </>
   );
 }

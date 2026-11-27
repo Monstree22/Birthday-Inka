@@ -47,7 +47,7 @@ export function BukaSaat() {
                 <button type="button" className={`bs-amplop${sudah ? " sudah" : ""}`} onClick={(e) => buka(i, e.currentTarget)}
                   aria-label={`Buka saat ${s.kapan}${sudah ? " (sudah pernah dibuka)" : ""}`}>
                   <span className="bs-tutup" aria-hidden="true" />
-                  <span className="bs-cap" aria-hidden="true">{sudah ? "✓" : "I"}</span>
+                  <span className="bs-cap" aria-hidden="true">{sudah ? "✓" : "♡"}</span>
                   <span className="bs-label"><small>Buka saat</small>{s.kapan}</span>
                 </button>
               </li>

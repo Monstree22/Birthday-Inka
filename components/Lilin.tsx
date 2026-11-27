@@ -10,7 +10,7 @@ function taburKelopak() {
   wadah.setAttribute("aria-hidden", "true");
   wadah.style.cssText = "position:fixed;inset:0;pointer-events:none;z-index:80;overflow:hidden";
   document.body.appendChild(wadah);
-  const warna = ["#C2412D", "#E9A79A", "#F6D9CF", "#D9A441"];
+  const warna = ["#E95A86", "#F6B3C8", "#D7263D", "#F7C04A"];
   for (let i = 0; i < 46; i++) {
     const k = document.createElement("i");
     const u = 8 + Math.random() * 10;
@@ -101,7 +101,7 @@ export default function Lilin() {
     <section id="lilin" className="lilin">
       <div className="wrap lilin-grid">
         <div>
-          <h2>Lilin yang harus kamu tiup sendiri</h2>
+          <h2>Make a wish, <em>{C.panggilanDia}</em></h2>
           <p className="lead">Aku nggak bisa pegangin kuenya, jadi kuenya aku kirim lewat sini. Izinkan mikrofon, pejamkan mata, bikin permohonan, lalu tiup ke layar. Nggak ada mikrofon? Ketuk lilinnya satu per satu.</p>
           <div className="aksi">
             <button className="tombol" type="button" onClick={pakaiMik}>{mikAktif ? "Matikan mikrofon" : "Nyalakan mikrofon"}</button>
@@ -120,7 +120,7 @@ export default function Lilin() {
               ))}
             </div>
             <div className="kue-lapis kue-atas"><span className="krim" /></div>
-            <div className="kue-lapis kue-bawah"><span className="tulisan-kue">{C.panggilanDia}</span></div>
+            <div className="kue-lapis kue-bawah"><span className="tulisan-kue">{C.umur}</span></div>
             <div className="piring" />
           </div>
           {selesai && <p className="harapan">Permohonanmu sudah aku dengar dari jauh. Semoga semuanya terkabul.</p>}
